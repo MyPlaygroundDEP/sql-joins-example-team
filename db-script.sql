@@ -18,3 +18,10 @@ CREATE TABLE module_program(
     CONSTRAINT fk_module_program FOREIGN KEY (program_id) REFERENCES program(id)
 );
 
+CREATE TABLE student_exam(
+    student_id VARCHAR(10) NOT NULL ,
+    exam_code VARCHAR(10) NOT NULL ,
+    marks INT,
+    CONSTRAINT fk_student_id FOREIGN KEY (student_id) REFERENCES student(id),
+    CONSTRAINT fk_exam_code FOREIGN KEY (exam_code) REFERENCES exam(exam_code)
+);
