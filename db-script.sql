@@ -8,6 +8,13 @@ CREATE TABLE exam(
     module_id VARCHAR(10) NOT NULL ,
     point_score INT NOT NULL,
 
-    CONSTRAINT fk_module FOREIGN KEY (moudle_id) REFERENCES module (id);
+    CONSTRAINT fk_module FOREIGN KEY (moudle_id) REFERENCES module (id)
+);
+
+CREATE TABLE module_program(
+    module_id VARCHAR(10) NOT NULL ,
+    program_id VARCHAR(10) NOT NULL ,
+    CONSTRAINT fk_program_module FOREIGN KEY (module_id) REFERENCES module(id),
+    CONSTRAINT fk_module_program FOREIGN KEY (program_id) REFERENCES program(id)
 );
 
