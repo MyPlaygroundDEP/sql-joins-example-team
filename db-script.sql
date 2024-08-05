@@ -1,3 +1,8 @@
+CREATE TABLE student(
+                        id VARCHAR(10) PRIMARY KEY ,
+                        name VARCHAR(100)
+);
+
 CREATE TABLE exam(
     exam_code VARCHAR(10) PRIMARY KEY ,
     module_id VARCHAR(10) NOT NULL ,
@@ -5,3 +10,4 @@ CREATE TABLE exam(
 
     CONSTRAINT fk_module FOREIGN KEY (moudle_id) REFERENCES module (id);
 );
+
